@@ -23,7 +23,7 @@ resource "aws_instance" "deploynode" {
    delete_on_termination = "true"
   }
   provisioner "file" {
-     source = "../conf/infrastructure_aws.tgz"
+     source = "../ansible_setup/infrastructure_aws.tgz"
      destination = "/tmp/infrastructure_aws.tgz"
      connection {
          type = "ssh"
